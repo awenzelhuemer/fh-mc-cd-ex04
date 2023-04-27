@@ -13,7 +13,7 @@ COPY main.go .
 RUN ls -al
 
 # Build the GO app as myapp binary and move it to /usr/
-RUN go build -o myapp && mv myapp src/usr/
+RUN go build -o myapp && mv myapp /src/usr/
 
 #Expose port 8888
 EXPOSE 8888
