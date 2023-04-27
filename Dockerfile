@@ -20,4 +20,4 @@ RUN mv myapp /usr/
 EXPOSE 8888
 
 # Run the service myapp when a container of this image is launched
-CMD ["myapp"]
+CMD ["/usr/myapp"]
