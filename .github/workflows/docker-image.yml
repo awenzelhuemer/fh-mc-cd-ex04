@@ -23,4 +23,4 @@ jobs:
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_TOKEN  }}
     - name: Push image to Docker
-      run: docker image push -a
+      run: docker image push -a awenzelhuemer/myhello
