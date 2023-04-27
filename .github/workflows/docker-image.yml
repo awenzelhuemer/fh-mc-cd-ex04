@@ -41,7 +41,7 @@ jobs:
       - name: Run scanner
         uses: aquasecurity/trivy-action@master
         with:
-          image-ref: "re1coy/myhello:latest"
+          image-ref: "awenzelhuemer/myhello:latest"
           format: "table"
           exit-code: "1"
           ignore-unfixed: true
