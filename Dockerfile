@@ -1,4 +1,4 @@
-FROM golang:1.11-alpine
+FROM golang:1.20-alpine
 
 # Set maintainer label: maintainer=[YOUR-EMAIL]
 LABEL maintainer="andreas.wenzelhuemer@gmail.com"
@@ -7,13 +7,14 @@ LABEL maintainer="andreas.wenzelhuemer@gmail.com"
 WORKDIR /src
 
 # Copy local file `main.go` to the working directory
-COPY main.go .
+COPY . .
 
 # List items in the working directory (ls)
 RUN ls -al
 
 # Build the GO app as myapp binary and move it to /usr/
-RUN go build -o myapp && mv myapp /src/usr/
+RUN go build -o myapp
+RUN mv myapp /usr/
 
 #Expose port 8888
 EXPOSE 8888
