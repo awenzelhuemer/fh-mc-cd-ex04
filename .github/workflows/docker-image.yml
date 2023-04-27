@@ -25,4 +25,4 @@ jobs:
     - name: Push image to Docker
       run: |
         docker image push awenzelhuemer/myhello:${{ github.sha }}
-        docker image push awenzelhuemer/myhello:${{ github.sha }}
+        docker image push awenzelhuemer/myhello:latest
