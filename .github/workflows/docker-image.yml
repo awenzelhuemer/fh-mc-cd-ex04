@@ -24,3 +24,7 @@ jobs:
         password: ${{ secrets.DOCKER_TOKEN  }}
     - name: Push image to Docker
       run: docker image push -a awenzelhuemer/myhello
+    - name: Scan Docker image for vulnerabilities
+      uses: aquasecurity/trivy-action@master
+      with:
+        image-ref: awenzelhuemer/myhello:latest
