@@ -1,3 +1,3 @@
-module e04
+module myhello
 
 go 1.20
